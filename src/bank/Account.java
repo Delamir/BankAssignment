@@ -13,7 +13,8 @@ public class Account {
     }
 
     public double deposit (double depositAmount) {
-        return depositAmount + balance;
+        balance = depositAmount + balance;
+        return balance;
     }
 
     public double withdraw(double withdrawAmount) {
