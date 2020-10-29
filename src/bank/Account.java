@@ -9,6 +9,23 @@ public class Account {
         return depositAmount + balance;
     }
 
+    public double withdraw(double withdrawAmount) {
+        if (balance >= withdrawAmount) {
+            balance = balance - withdrawAmount;
+            return balance;
+        } else {
+            return -1;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Account\n" +
+                "Account Number: " + accountNumber + "\n" +
+                "Name: " + customerName + "\n" +
+                "Balance: " + balance;
+    }
+
     public int getAccountNumber() {
         return accountNumber;
     }
@@ -31,22 +48,5 @@ public class Account {
 
     public void setBalance(double balance) {
         this.balance = balance;
-    }
-
-    @Override
-    public String toString() {
-        return "Account\n" +
-                "Account Number: " + accountNumber + "\n" +
-                "Name: " + customerName + "\n" +
-                "Balance: " + balance;
-    }
-
-    public double withdraw(double withdrawAmount) {
-        if (balance >= withdrawAmount) {
-            balance = balance - withdrawAmount;
-            return balance;
-        } else {
-            return -1;
-        }
     }
 }
