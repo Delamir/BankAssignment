@@ -25,5 +25,13 @@ class AccountTest {
 
     @Test
     void transfer() {
+        Account b = new Account (12345, "joe", 350);
+        Account c = new Account (4321, "moe", 1337);
+        b.transfer(100, c);
+        assertEquals(245, b.getBalance(), 0.0001);
+        assertEquals(1437, c.getBalance(), 0.001);
+        assertEquals(-1, b.transfer(244, c), 0.0001);
+        assertEquals(245, b.getBalance(), 0.0001);
+        assertEquals(1437, c.getBalance(), 0.001);
     }
 }
