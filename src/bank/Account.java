@@ -4,6 +4,7 @@ public class Account {
     private int accountNumber;
     private String customerName;
     private double balance;
+    private static final int TRANSFER_FEE = 5;
 
     public Account(int accountNumber, String customerName, double balance) {
         this.accountNumber = accountNumber;
@@ -18,6 +19,15 @@ public class Account {
     public double withdraw(double withdrawAmount) {
         if (balance >= withdrawAmount) {
             balance = balance - withdrawAmount;
+            return balance;
+        } else {
+            return -1;
+        }
+    }
+
+    public double transfer (double transferAmount, Account destination) {
+        if(withdraw(transferAmount + TRANSFER_FEE) != -1) {
+            destination.deposit(transferAmount);
             return balance;
         } else {
             return -1;
