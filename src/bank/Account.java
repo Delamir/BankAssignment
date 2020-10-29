@@ -5,6 +5,10 @@ public class Account {
     private String customerName;
     private double balance;
 
+    public double deposit (double depositAmount) {
+        return depositAmount + balance;
+    }
+
     public int getAccountNumber() {
         return accountNumber;
     }
