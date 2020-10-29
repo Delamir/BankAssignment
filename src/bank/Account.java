@@ -5,6 +5,12 @@ public class Account {
     private String customerName;
     private double balance;
 
+    public Account(int accountNumber, String customerName, double balance) {
+        this.accountNumber = accountNumber;
+        this.customerName = customerName;
+        this.balance = balance;
+    }
+
     public double deposit (double depositAmount) {
         return depositAmount + balance;
     }
