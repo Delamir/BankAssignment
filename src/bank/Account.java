@@ -28,4 +28,13 @@ public class Account {
     public void setBalance(double balance) {
         this.balance = balance;
     }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "accountNumber=" + accountNumber +
+                ", customerName='" + customerName + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
 }
