@@ -35,10 +35,9 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account{" +
-                "accountNumber=" + accountNumber +
-                ", customerName='" + customerName + '\'' +
-                ", balance=" + balance +
-                '}';
+        return "Account\n" +
+                "Account Number: " + accountNumber + "\n" +
+                "Name: " + customerName + "\n" +
+                "Balance: " + balance;
     }
 }
