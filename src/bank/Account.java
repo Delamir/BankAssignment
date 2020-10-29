@@ -40,4 +40,13 @@ public class Account {
                 "Name: " + customerName + "\n" +
                 "Balance: " + balance;
     }
+
+    public double withdraw(double withdrawAmount) {
+        if (balance >= withdrawAmount) {
+            balance = balance - withdrawAmount;
+            return balance;
+        } else {
+            return -1;
+        }
+    }
 }
